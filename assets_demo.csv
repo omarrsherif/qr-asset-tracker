@@ -1,4 +1,4 @@
-asset_id,item_name,category,expected_location,current_location,status,owner,maintenance_state,last_scanned,last_scan_location,scan_count,notes
+﻿asset_id,item_name,category,expected_location,current_location,status,owner,maintenance_state,last_scanned,last_scan_location,scan_count,notes
 A001,HDMI Cable,AV Accessory,Room 101,Room 101,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
 A002,Projector Remote,AV Accessory,Room 203,Room 203,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
 A003,Laptop Charger,Power,Storage,Storage,Spare,Tech Staff,Good,N/A,N/A,0,N/A
@@ -54,3 +54,404 @@ A052,Folding Chair,Furniture,Storage,Storage,Active,Event Support,Good,N/A,N/A,0
 A053,Ipad,Mobile Device,Library,Library,Active,Library Staff,Good,N/A,N/A,0,N/A
 A054,E-reader,Mobile Device,Library,Library,Active,Library Staff,Good,N/A,N/A,0,N/A
 A055,Checkout Scanner,IT Equipment,Library,Library,Active,Library Staff,Good,N/A,N/A,0,N/A
+A056,Chromebook 56,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-02 01:07:00,Room 101,1,N/A
+A057,Laptop 57,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,2026-03-03 02:14:00,Room 102,2,Issued for daily use
+A058,Tablet 58,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-04 03:21:00,Room 103,3,Assigned to shared pool
+A059,Monitor 59,AV Equipment,Room 104,Room 104,Active,Inventory Team,Maintenance Due,2026-03-05 04:28:00,Room 104,4,Check accessories before checkout
+A060,Docking Station 60,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-06 05:35:00,Room 105,5,Scheduled for quarterly review
+A061,Wireless Keyboard 61,Power,Room 106,Room 106,Active,Media Team,Good,N/A,N/A,0,N/A
+A062,Wireless Mouse 62,Facilities,Room 107,Room 107,Active,Library Staff,Needs Battery,2026-03-08 07:49:00,Room 107,1,N/A
+A063,USB-C Charger 63,Safety,Room 108,Room 108,Active,Event Support,Maintenance Due,2026-03-09 08:56:00,Room 108,2,Issued for daily use
+A064,Projector 64,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-10 00:03:00,Room 109,3,Assigned to shared pool
+A065,Webcam 65,Maintenance,Room 110,Room 110,Spare,Front Desk,Good,2026-03-11 01:10:00,Room 110,4,Check accessories before checkout
+A066,Headset 66,IT Equipment,Room 201,Room 201,In Repair,Tech Staff,Good,2026-03-12 02:17:00,Room 201,5,Scheduled for quarterly review
+A067,Microphone 67,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Maintenance Due,N/A,N/A,0,N/A
+A068,Speakerphone 68,Office Equipment,Room 203,Room 203,Active,Office Staff,Restock Needed,2026-03-14 04:31:00,Room 203,1,N/A
+A069,Printer 69,AV Equipment,Room 204,Room 204,Active,Inventory Team,Needs Battery,2026-03-15 05:38:00,Room 204,2,Issued for daily use
+A070,Label Printer 70,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-16 06:45:00,Room 205,3,Assigned to shared pool
+A071,Barcode Scanner 71,Power,Room 206,Room 206,Active,Media Team,Maintenance Due,2026-03-17 07:52:00,Room 206,4,Check accessories before checkout
+A072,Receipt Printer 72,Facilities,Room 207,Front Office,Active,Library Staff,Good,2026-03-18 08:59:00,Front Office,5,Scheduled for quarterly review
+A073,Router 73,Safety,Room 208,Room 208,Active,Event Support,Good,N/A,N/A,0,N/A
+A074,Switch 74,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-20 01:13:00,Room 209,1,N/A
+A075,Access Point 75,Maintenance,Room 210,Room 210,Spare,Front Desk,Maintenance Due,2026-03-21 02:20:00,Room 210,2,Issued for daily use
+A076,Patch Cable 76,IT Equipment,Storage,Storage,Active,Tech Staff,Needs Battery,2026-03-22 03:27:00,Storage,3,Assigned to shared pool
+A077,Surge Protector 77,Mobile Device,Front Office,Front Office,In Repair,Classroom Mgmt,Good,2026-03-23 04:34:00,Front Office,4,Check accessories before checkout
+A078,Battery Backup 78,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-24 05:41:00,Library,5,Scheduled for quarterly review
+A079,Extension Cord 79,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Maintenance Due,N/A,N/A,0,N/A
+A080,Power Strip 80,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-26 07:55:00,Reception,1,N/A
+A081,Document Camera 81,Power,Receiving,Receiving,Active,Media Team,Restock Needed,2026-03-27 08:02:00,Receiving,2,Issued for daily use
+A082,TV Cart 82,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-28 00:09:00,Workshop,3,Assigned to shared pool
+A083,HDMI Adapter 83,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Needs Battery,2026-03-29 01:16:00,Janitor Closet,4,Check accessories before checkout
+A084,Portable SSD 84,Audio,Conference Room A,Conference Room A,Retired,Security Team,Needs Replacement,2026-03-30 02:23:00,Conference Room A,5,Scheduled for quarterly review
+A085,External Hard Drive 85,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Good,N/A,N/A,0,N/A
+A086,Tool Kit 86,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-01 04:37:00,Room 101,1,N/A
+A087,Drill Driver 87,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Maintenance Due,2026-03-02 05:44:00,Room 102,2,Issued for daily use
+A088,Vacuum 88,Office Equipment,Room 103,Room 103,In Repair,Office Staff,Good,2026-03-03 06:51:00,Room 103,3,Assigned to shared pool
+A089,Air Purifier 89,AV Equipment,Room 104,Room 109,Active,Inventory Team,Good,2026-03-04 07:58:00,Room 109,4,Check accessories before checkout
+A090,Fan 90,Networking,Room 105,Room 105,Spare,Facilities,Needs Battery,2026-03-05 08:05:00,Room 105,5,Scheduled for quarterly review
+A091,First Aid Kit 91,Power,Room 106,Room 106,Active,Media Team,Maintenance Due,N/A,N/A,0,N/A
+A092,Walkie Talkie 92,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-07 01:19:00,Room 107,1,N/A
+A093,Camera 93,Safety,Room 108,Room 108,Active,Event Support,Good,2026-03-08 02:26:00,Room 108,2,Issued for daily use
+A094,Tripod 94,Audio,Room 109,Room 109,Active,Security Team,Restock Needed,2026-03-09 03:33:00,Room 109,3,Assigned to shared pool
+A095,Lighting Kit 95,Maintenance,Room 110,Room 110,Spare,Front Desk,Maintenance Due,2026-03-10 04:40:00,Room 110,4,Check accessories before checkout
+A096,Chromebook 96,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-11 05:47:00,Room 201,5,Scheduled for quarterly review
+A097,Laptop 97,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Needs Battery,N/A,N/A,0,N/A
+A098,Tablet 98,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-13 07:01:00,Room 203,1,N/A
+A099,Monitor 99,AV Equipment,Room 204,Room 204,In Repair,Inventory Team,Maintenance Due,2026-03-14 08:08:00,Room 204,2,Issued for daily use
+A100,Docking Station 100,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-15 00:15:00,Room 205,3,Assigned to shared pool
+A101,Wireless Keyboard 101,Power,Room 206,Room 206,Active,Media Team,Good,2026-03-16 01:22:00,Room 206,4,Check accessories before checkout
+A102,Wireless Mouse 102,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-17 02:29:00,Room 207,5,Scheduled for quarterly review
+A103,USB-C Charger 103,Safety,Room 208,Room 208,Active,Event Support,Maintenance Due,N/A,N/A,0,N/A
+A104,Projector 104,Audio,Room 209,Room 209,Active,Security Team,Needs Battery,2026-03-19 04:43:00,Room 209,1,N/A
+A105,Webcam 105,Maintenance,Room 210,Room 210,Spare,Front Desk,Good,2026-03-20 05:50:00,Room 210,2,Issued for daily use
+A106,Headset 106,IT Equipment,Storage,Receiving,Active,Tech Staff,Good,2026-03-21 06:57:00,Receiving,3,Assigned to shared pool
+A107,Microphone 107,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Restock Needed,2026-03-22 07:04:00,Front Office,4,Check accessories before checkout
+A108,Speakerphone 108,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-23 08:11:00,Library,5,Scheduled for quarterly review
+A109,Printer 109,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Good,N/A,N/A,0,N/A
+A110,Label Printer 110,Networking,Reception,Reception,In Repair,Facilities,Good,2026-03-25 01:25:00,Reception,1,N/A
+A111,Barcode Scanner 111,Power,Receiving,Receiving,Active,Media Team,Needs Battery,2026-03-26 02:32:00,Receiving,2,Issued for daily use
+A112,Receipt Printer 112,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-27 03:39:00,Workshop,3,Assigned to shared pool
+A113,Router 113,Safety,Janitor Closet,Janitor Closet,Retired,Event Support,Needs Replacement,2026-03-28 04:46:00,Janitor Closet,4,Check accessories before checkout
+A114,Switch 114,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-29 05:53:00,Conference Room A,5,Scheduled for quarterly review
+A115,Access Point 115,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Maintenance Due,N/A,N/A,0,N/A
+A116,Patch Cable 116,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-31 07:07:00,Room 101,1,N/A
+A117,Surge Protector 117,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,2026-03-01 08:14:00,Room 102,2,Issued for daily use
+A118,Battery Backup 118,Office Equipment,Room 103,Room 103,Active,Office Staff,Needs Battery,2026-03-02 00:21:00,Room 103,3,Assigned to shared pool
+A119,Extension Cord 119,AV Equipment,Room 104,Room 104,Active,Inventory Team,Maintenance Due,2026-03-03 01:28:00,Room 104,4,Check accessories before checkout
+A120,Power Strip 120,Networking,Room 105,Room 105,Spare,Facilities,Restock Needed,2026-03-04 02:35:00,Room 105,5,Scheduled for quarterly review
+A121,Document Camera 121,Power,Room 106,Room 106,In Repair,Media Team,Good,N/A,N/A,0,N/A
+A122,TV Cart 122,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-06 04:49:00,Room 107,1,N/A
+A123,HDMI Adapter 123,Safety,Room 108,Room 203,Active,Event Support,Maintenance Due,2026-03-07 05:56:00,Room 203,2,Issued for daily use
+A124,Portable SSD 124,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-08 06:03:00,Room 109,3,Assigned to shared pool
+A125,External Hard Drive 125,Maintenance,Room 110,Room 110,Spare,Front Desk,Needs Battery,2026-03-09 07:10:00,Room 110,4,Check accessories before checkout
+A126,Tool Kit 126,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-10 08:17:00,Room 201,5,Scheduled for quarterly review
+A127,Drill Driver 127,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Maintenance Due,N/A,N/A,0,N/A
+A128,Vacuum 128,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-12 01:31:00,Room 203,1,N/A
+A129,Air Purifier 129,AV Equipment,Room 204,Room 204,Active,Inventory Team,Good,2026-03-13 02:38:00,Room 204,2,Issued for daily use
+A130,Fan 130,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-14 03:45:00,Room 205,3,Assigned to shared pool
+A131,First Aid Kit 131,Power,Room 206,Room 206,Active,Media Team,Maintenance Due,2026-03-15 04:52:00,Room 206,4,Check accessories before checkout
+A132,Walkie Talkie 132,Facilities,Room 207,Room 207,In Repair,Library Staff,Needs Battery,2026-03-16 05:59:00,Room 207,5,Scheduled for quarterly review
+A133,Camera 133,Safety,Room 208,Room 208,Active,Event Support,Restock Needed,N/A,N/A,0,N/A
+A134,Tripod 134,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-18 07:13:00,Room 209,1,N/A
+A135,Lighting Kit 135,Maintenance,Room 210,Room 210,Spare,Front Desk,Maintenance Due,2026-03-19 08:20:00,Room 210,2,Issued for daily use
+A136,Chromebook 136,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-20 00:27:00,Storage,3,Assigned to shared pool
+A137,Laptop 137,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Good,2026-03-21 01:34:00,Front Office,4,Check accessories before checkout
+A138,Tablet 138,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-22 02:41:00,Library,5,Scheduled for quarterly review
+A139,Monitor 139,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Needs Battery,N/A,N/A,0,N/A
+A140,Docking Station 140,Networking,Reception,Conference Room B,Spare,Facilities,Good,2026-03-24 04:55:00,Conference Room B,1,N/A
+A141,Wireless Keyboard 141,Power,Receiving,Receiving,Active,Media Team,Good,2026-03-25 05:02:00,Receiving,2,Issued for daily use
+A142,Wireless Mouse 142,Facilities,Workshop,Workshop,Retired,Library Staff,Needs Replacement,2026-03-26 06:09:00,Workshop,3,Assigned to shared pool
+A143,USB-C Charger 143,Safety,Janitor Closet,Janitor Closet,In Repair,Event Support,Maintenance Due,2026-03-27 07:16:00,Janitor Closet,4,Check accessories before checkout
+A144,Projector 144,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-28 08:23:00,Conference Room A,5,Scheduled for quarterly review
+A145,Webcam 145,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Good,N/A,N/A,0,N/A
+A146,Headset 146,IT Equipment,Room 101,Room 101,Active,Tech Staff,Restock Needed,2026-03-30 01:37:00,Room 101,1,N/A
+A147,Microphone 147,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Maintenance Due,2026-03-31 02:44:00,Room 102,2,Issued for daily use
+A148,Speakerphone 148,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-01 03:51:00,Room 103,3,Assigned to shared pool
+A149,Printer 149,AV Equipment,Room 104,Room 104,Active,Inventory Team,Good,2026-03-02 04:58:00,Room 104,4,Check accessories before checkout
+A150,Label Printer 150,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-03 05:05:00,Room 105,5,Scheduled for quarterly review
+A151,Barcode Scanner 151,Power,Room 106,Room 106,Active,Media Team,Maintenance Due,N/A,N/A,0,N/A
+A152,Receipt Printer 152,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-05 07:19:00,Room 107,1,N/A
+A153,Router 153,Safety,Room 108,Room 108,Active,Event Support,Needs Battery,2026-03-06 08:26:00,Room 108,2,Issued for daily use
+A154,Switch 154,Audio,Room 109,Room 109,In Repair,Security Team,Good,2026-03-07 00:33:00,Room 109,3,Assigned to shared pool
+A155,Access Point 155,Maintenance,Room 110,Room 110,Spare,Front Desk,Maintenance Due,2026-03-08 01:40:00,Room 110,4,Check accessories before checkout
+A156,Patch Cable 156,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-09 02:47:00,Room 201,5,Scheduled for quarterly review
+A157,Surge Protector 157,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A158,Battery Backup 158,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-11 04:01:00,Room 203,1,N/A
+A159,Extension Cord 159,AV Equipment,Room 204,Room 204,Active,Inventory Team,Restock Needed,2026-03-12 05:08:00,Room 204,2,Issued for daily use
+A160,Power Strip 160,Networking,Room 205,Room 205,Spare,Facilities,Needs Battery,2026-03-13 06:15:00,Room 205,3,Assigned to shared pool
+A161,Document Camera 161,Power,Room 206,Room 206,Active,Media Team,Good,2026-03-14 07:22:00,Room 206,4,Check accessories before checkout
+A162,TV Cart 162,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-15 08:29:00,Room 207,5,Scheduled for quarterly review
+A163,HDMI Adapter 163,Safety,Room 208,Room 208,Active,Event Support,Maintenance Due,N/A,N/A,0,N/A
+A164,Portable SSD 164,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-17 01:43:00,Room 209,1,N/A
+A165,External Hard Drive 165,Maintenance,Room 210,Room 210,In Repair,Front Desk,Good,2026-03-18 02:50:00,Room 210,2,Issued for daily use
+A166,Tool Kit 166,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-19 03:57:00,Storage,3,Assigned to shared pool
+A167,Drill Driver 167,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Needs Battery,2026-03-20 04:04:00,Front Office,4,Check accessories before checkout
+A168,Vacuum 168,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-21 05:11:00,Library,5,Scheduled for quarterly review
+A169,Air Purifier 169,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Good,N/A,N/A,0,N/A
+A170,Fan 170,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-23 07:25:00,Reception,1,N/A
+A171,First Aid Kit 171,Power,Receiving,Receiving,Retired,Media Team,Needs Replacement,2026-03-24 08:32:00,Receiving,2,Issued for daily use
+A172,Walkie Talkie 172,Facilities,Workshop,Workshop,Active,Library Staff,Restock Needed,2026-03-25 00:39:00,Workshop,3,Assigned to shared pool
+A173,Camera 173,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Good,2026-03-26 01:46:00,Janitor Closet,4,Check accessories before checkout
+A174,Tripod 174,Audio,Conference Room A,Room 104,Active,Security Team,Needs Battery,2026-03-27 02:53:00,Room 104,5,Scheduled for quarterly review
+A175,Lighting Kit 175,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Maintenance Due,N/A,N/A,0,N/A
+A176,Chromebook 176,IT Equipment,Room 101,Room 101,In Repair,Tech Staff,Good,2026-03-29 04:07:00,Room 101,1,N/A
+A177,Laptop 177,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,2026-03-30 05:14:00,Room 102,2,Issued for daily use
+A178,Tablet 178,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-31 06:21:00,Room 103,3,Assigned to shared pool
+A179,Monitor 179,AV Equipment,Room 104,Room 104,Active,Inventory Team,Maintenance Due,2026-03-01 07:28:00,Room 104,4,Check accessories before checkout
+A180,Docking Station 180,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-02 08:35:00,Room 105,5,Scheduled for quarterly review
+A181,Wireless Keyboard 181,Power,Room 106,Room 106,Active,Media Team,Needs Battery,N/A,N/A,0,N/A
+A182,Wireless Mouse 182,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-04 01:49:00,Room 107,1,N/A
+A183,USB-C Charger 183,Safety,Room 108,Room 108,Active,Event Support,Maintenance Due,2026-03-05 02:56:00,Room 108,2,Issued for daily use
+A184,Projector 184,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-06 03:03:00,Room 109,3,Assigned to shared pool
+A185,Webcam 185,Maintenance,Room 110,Room 110,Spare,Front Desk,Restock Needed,2026-03-07 04:10:00,Room 110,4,Check accessories before checkout
+A186,Headset 186,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-08 05:17:00,Room 201,5,Scheduled for quarterly review
+A187,Microphone 187,Mobile Device,Room 202,Room 202,In Repair,Classroom Mgmt,Maintenance Due,N/A,N/A,0,N/A
+A188,Speakerphone 188,Office Equipment,Room 203,Room 203,Active,Office Staff,Needs Battery,2026-03-10 07:31:00,Room 203,1,N/A
+A189,Printer 189,AV Equipment,Room 204,Room 204,Active,Inventory Team,Good,2026-03-11 08:38:00,Room 204,2,Issued for daily use
+A190,Label Printer 190,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-12 00:45:00,Room 205,3,Assigned to shared pool
+A191,Barcode Scanner 191,Power,Room 206,Storage,Active,Media Team,Maintenance Due,2026-03-13 01:52:00,Storage,4,Check accessories before checkout
+A192,Receipt Printer 192,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-14 02:59:00,Room 207,5,Scheduled for quarterly review
+A193,Router 193,Safety,Room 208,Room 208,Active,Event Support,Good,N/A,N/A,0,N/A
+A194,Switch 194,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-16 04:13:00,Room 209,1,N/A
+A195,Access Point 195,Maintenance,Room 210,Room 210,Spare,Front Desk,Needs Battery,2026-03-17 05:20:00,Room 210,2,Issued for daily use
+A196,Patch Cable 196,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-18 06:27:00,Storage,3,Assigned to shared pool
+A197,Surge Protector 197,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Good,2026-03-19 07:34:00,Front Office,4,Check accessories before checkout
+A198,Battery Backup 198,Office Equipment,Library,Library,In Repair,Office Staff,Restock Needed,2026-03-20 08:41:00,Library,5,Scheduled for quarterly review
+A199,Extension Cord 199,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Maintenance Due,N/A,N/A,0,N/A
+A200,Power Strip 200,Networking,Reception,Reception,Retired,Facilities,Needs Replacement,2026-03-22 01:55:00,Reception,1,N/A
+A201,Document Camera 201,Power,Receiving,Receiving,Active,Media Team,Good,2026-03-23 02:02:00,Receiving,2,Issued for daily use
+A202,TV Cart 202,Facilities,Workshop,Workshop,Active,Library Staff,Needs Battery,2026-03-24 03:09:00,Workshop,3,Assigned to shared pool
+A203,HDMI Adapter 203,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Maintenance Due,2026-03-25 04:16:00,Janitor Closet,4,Check accessories before checkout
+A204,Portable SSD 204,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-26 05:23:00,Conference Room A,5,Scheduled for quarterly review
+A205,External Hard Drive 205,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Good,N/A,N/A,0,N/A
+A206,Tool Kit 206,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-28 07:37:00,Room 101,1,N/A
+A207,Drill Driver 207,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Maintenance Due,2026-03-29 08:44:00,Room 102,2,Issued for daily use
+A208,Vacuum 208,Office Equipment,Room 103,Room 108,Active,Office Staff,Good,2026-03-30 00:51:00,Room 108,3,Assigned to shared pool
+A209,Air Purifier 209,AV Equipment,Room 104,Room 104,In Repair,Inventory Team,Needs Battery,2026-03-31 01:58:00,Room 104,4,Check accessories before checkout
+A210,Fan 210,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-01 02:05:00,Room 105,5,Scheduled for quarterly review
+A211,First Aid Kit 211,Power,Room 106,Room 106,Active,Media Team,Restock Needed,N/A,N/A,0,N/A
+A212,Walkie Talkie 212,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-03 04:19:00,Room 107,1,N/A
+A213,Camera 213,Safety,Room 108,Room 108,Active,Event Support,Good,2026-03-04 05:26:00,Room 108,2,Issued for daily use
+A214,Tripod 214,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-05 06:33:00,Room 109,3,Assigned to shared pool
+A215,Lighting Kit 215,Maintenance,Room 110,Room 110,Spare,Front Desk,Maintenance Due,2026-03-06 07:40:00,Room 110,4,Check accessories before checkout
+A216,Chromebook 216,IT Equipment,Room 201,Room 201,Active,Tech Staff,Needs Battery,2026-03-07 08:47:00,Room 201,5,Scheduled for quarterly review
+A217,Laptop 217,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A218,Tablet 218,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-09 01:01:00,Room 203,1,N/A
+A219,Monitor 219,AV Equipment,Room 204,Room 204,Active,Inventory Team,Maintenance Due,2026-03-10 02:08:00,Room 204,2,Issued for daily use
+A220,Docking Station 220,Networking,Room 205,Room 205,In Repair,Facilities,Good,2026-03-11 03:15:00,Room 205,3,Assigned to shared pool
+A221,Wireless Keyboard 221,Power,Room 206,Room 206,Active,Media Team,Good,2026-03-12 04:22:00,Room 206,4,Check accessories before checkout
+A222,Wireless Mouse 222,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-13 05:29:00,Room 207,5,Scheduled for quarterly review
+A223,USB-C Charger 223,Safety,Room 208,Room 208,Active,Event Support,Needs Battery,N/A,N/A,0,N/A
+A224,Projector 224,Audio,Room 209,Room 209,Active,Security Team,Restock Needed,2026-03-15 07:43:00,Room 209,1,N/A
+A225,Webcam 225,Maintenance,Room 210,Reception,Spare,Front Desk,Good,2026-03-16 08:50:00,Reception,2,Issued for daily use
+A226,Headset 226,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-17 00:57:00,Storage,3,Assigned to shared pool
+A227,Microphone 227,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Maintenance Due,2026-03-18 01:04:00,Front Office,4,Check accessories before checkout
+A228,Speakerphone 228,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-19 02:11:00,Library,5,Scheduled for quarterly review
+A229,Printer 229,AV Equipment,Media Lab,Media Lab,Retired,Inventory Team,Needs Replacement,N/A,N/A,0,N/A
+A230,Label Printer 230,Networking,Reception,Reception,Spare,Facilities,Needs Battery,2026-03-21 04:25:00,Reception,1,N/A
+A231,Barcode Scanner 231,Power,Receiving,Receiving,In Repair,Media Team,Maintenance Due,2026-03-22 05:32:00,Receiving,2,Issued for daily use
+A232,Receipt Printer 232,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-23 06:39:00,Workshop,3,Assigned to shared pool
+A233,Router 233,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Good,2026-03-24 07:46:00,Janitor Closet,4,Check accessories before checkout
+A234,Switch 234,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-25 08:53:00,Conference Room A,5,Scheduled for quarterly review
+A235,Access Point 235,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Maintenance Due,N/A,N/A,0,N/A
+A236,Patch Cable 236,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-27 01:07:00,Room 101,1,N/A
+A237,Surge Protector 237,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Restock Needed,2026-03-28 02:14:00,Room 102,2,Issued for daily use
+A238,Battery Backup 238,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-29 03:21:00,Room 103,3,Assigned to shared pool
+A239,Extension Cord 239,AV Equipment,Room 104,Room 104,Active,Inventory Team,Maintenance Due,2026-03-30 04:28:00,Room 104,4,Check accessories before checkout
+A240,Power Strip 240,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-31 05:35:00,Room 105,5,Scheduled for quarterly review
+A241,Document Camera 241,Power,Room 106,Room 106,Active,Media Team,Good,N/A,N/A,0,N/A
+A242,TV Cart 242,Facilities,Room 107,Room 202,In Repair,Library Staff,Good,2026-03-02 07:49:00,Room 202,1,N/A
+A243,HDMI Adapter 243,Safety,Room 108,Room 108,Active,Event Support,Maintenance Due,2026-03-03 08:56:00,Room 108,2,Issued for daily use
+A244,Portable SSD 244,Audio,Room 109,Room 109,Active,Security Team,Needs Battery,2026-03-04 00:03:00,Room 109,3,Assigned to shared pool
+A245,External Hard Drive 245,Maintenance,Room 110,Room 110,Spare,Front Desk,Good,2026-03-05 01:10:00,Room 110,4,Check accessories before checkout
+A246,Tool Kit 246,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-06 02:17:00,Room 201,5,Scheduled for quarterly review
+A247,Drill Driver 247,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Maintenance Due,N/A,N/A,0,N/A
+A248,Vacuum 248,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-08 04:31:00,Room 203,1,N/A
+A249,Air Purifier 249,AV Equipment,Room 204,Room 204,Active,Inventory Team,Good,2026-03-09 05:38:00,Room 204,2,Issued for daily use
+A250,Fan 250,Networking,Room 205,Room 205,Spare,Facilities,Restock Needed,2026-03-10 06:45:00,Room 205,3,Assigned to shared pool
+A251,First Aid Kit 251,Power,Room 206,Room 206,Active,Media Team,Needs Battery,2026-03-11 07:52:00,Room 206,4,Check accessories before checkout
+A252,Walkie Talkie 252,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-12 08:59:00,Room 207,5,Scheduled for quarterly review
+A253,Camera 253,Safety,Room 208,Room 208,In Repair,Event Support,Good,N/A,N/A,0,N/A
+A254,Tripod 254,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-14 01:13:00,Room 209,1,N/A
+A255,Lighting Kit 255,Maintenance,Room 210,Room 210,Spare,Front Desk,Maintenance Due,2026-03-15 02:20:00,Room 210,2,Issued for daily use
+A256,Chromebook 256,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-16 03:27:00,Storage,3,Assigned to shared pool
+A257,Laptop 257,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Good,2026-03-17 04:34:00,Front Office,4,Check accessories before checkout
+A258,Tablet 258,Office Equipment,Library,Library,Retired,Office Staff,Needs Replacement,2026-03-18 05:41:00,Library,5,Scheduled for quarterly review
+A259,Monitor 259,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Maintenance Due,N/A,N/A,0,N/A
+A260,Docking Station 260,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-20 07:55:00,Reception,1,N/A
+A261,Wireless Keyboard 261,Power,Receiving,Receiving,Active,Media Team,Good,2026-03-21 08:02:00,Receiving,2,Issued for daily use
+A262,Wireless Mouse 262,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-22 00:09:00,Workshop,3,Assigned to shared pool
+A263,USB-C Charger 263,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Restock Needed,2026-03-23 01:16:00,Janitor Closet,4,Check accessories before checkout
+A264,Projector 264,Audio,Conference Room A,Conference Room A,In Repair,Security Team,Good,2026-03-24 02:23:00,Conference Room A,5,Scheduled for quarterly review
+A265,Webcam 265,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Needs Battery,N/A,N/A,0,N/A
+A266,Headset 266,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-26 04:37:00,Room 101,1,N/A
+A267,Microphone 267,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Maintenance Due,2026-03-27 05:44:00,Room 102,2,Issued for daily use
+A268,Speakerphone 268,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-28 06:51:00,Room 103,3,Assigned to shared pool
+A269,Printer 269,AV Equipment,Room 104,Room 104,Active,Inventory Team,Good,2026-03-29 07:58:00,Room 104,4,Check accessories before checkout
+A270,Label Printer 270,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-30 08:05:00,Room 105,5,Scheduled for quarterly review
+A271,Barcode Scanner 271,Power,Room 106,Room 106,Active,Media Team,Maintenance Due,N/A,N/A,0,N/A
+A272,Receipt Printer 272,Facilities,Room 107,Room 107,Active,Library Staff,Needs Battery,2026-03-01 01:19:00,Room 107,1,N/A
+A273,Router 273,Safety,Room 108,Room 108,Active,Event Support,Good,2026-03-02 02:26:00,Room 108,2,Issued for daily use
+A274,Switch 274,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-03 03:33:00,Room 109,3,Assigned to shared pool
+A275,Access Point 275,Maintenance,Room 110,Room 110,In Repair,Front Desk,Maintenance Due,2026-03-04 04:40:00,Room 110,4,Check accessories before checkout
+A276,Patch Cable 276,IT Equipment,Room 201,Room 206,Active,Tech Staff,Restock Needed,2026-03-05 05:47:00,Room 206,5,Scheduled for quarterly review
+A277,Surge Protector 277,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A278,Battery Backup 278,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-07 07:01:00,Room 203,1,N/A
+A279,Extension Cord 279,AV Equipment,Room 204,Room 204,Active,Inventory Team,Needs Battery,2026-03-08 08:08:00,Room 204,2,Issued for daily use
+A280,Power Strip 280,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-09 00:15:00,Room 205,3,Assigned to shared pool
+A281,Document Camera 281,Power,Room 206,Room 206,Active,Media Team,Good,2026-03-10 01:22:00,Room 206,4,Check accessories before checkout
+A282,TV Cart 282,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-11 02:29:00,Room 207,5,Scheduled for quarterly review
+A283,HDMI Adapter 283,Safety,Room 208,Room 208,Active,Event Support,Maintenance Due,N/A,N/A,0,N/A
+A284,Portable SSD 284,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-13 04:43:00,Room 209,1,N/A
+A285,External Hard Drive 285,Maintenance,Room 210,Room 210,Spare,Front Desk,Good,2026-03-14 05:50:00,Room 210,2,Issued for daily use
+A286,Tool Kit 286,IT Equipment,Storage,Storage,In Repair,Tech Staff,Needs Battery,2026-03-15 06:57:00,Storage,3,Assigned to shared pool
+A287,Drill Driver 287,Mobile Device,Front Office,Front Office,Retired,Classroom Mgmt,Needs Replacement,2026-03-16 07:04:00,Front Office,4,Check accessories before checkout
+A288,Vacuum 288,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-17 08:11:00,Library,5,Scheduled for quarterly review
+A289,Air Purifier 289,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Restock Needed,N/A,N/A,0,N/A
+A290,Fan 290,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-19 01:25:00,Reception,1,N/A
+A291,First Aid Kit 291,Power,Receiving,Receiving,Active,Media Team,Maintenance Due,2026-03-20 02:32:00,Receiving,2,Issued for daily use
+A292,Walkie Talkie 292,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-21 03:39:00,Workshop,3,Assigned to shared pool
+A293,Camera 293,Safety,Janitor Closet,Room 103,Active,Event Support,Needs Battery,2026-03-22 04:46:00,Room 103,4,Check accessories before checkout
+A294,Tripod 294,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-23 05:53:00,Conference Room A,5,Scheduled for quarterly review
+A295,Lighting Kit 295,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Maintenance Due,N/A,N/A,0,N/A
+A296,Chromebook 296,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-25 07:07:00,Room 101,1,N/A
+A297,Laptop 297,Mobile Device,Room 102,Room 102,In Repair,Classroom Mgmt,Good,2026-03-26 08:14:00,Room 102,2,Issued for daily use
+A298,Tablet 298,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-27 00:21:00,Room 103,3,Assigned to shared pool
+A299,Monitor 299,AV Equipment,Room 104,Room 104,Active,Inventory Team,Maintenance Due,2026-03-28 01:28:00,Room 104,4,Check accessories before checkout
+A300,Docking Station 300,Networking,Room 105,Room 105,Spare,Facilities,Needs Battery,2026-03-29 02:35:00,Room 105,5,Scheduled for quarterly review
+A301,Wireless Keyboard 301,Power,Room 106,Room 106,Active,Media Team,Good,N/A,N/A,0,N/A
+A302,Wireless Mouse 302,Facilities,Room 107,Room 107,Active,Library Staff,Restock Needed,2026-03-31 04:49:00,Room 107,1,N/A
+A303,USB-C Charger 303,Safety,Room 108,Room 108,Active,Event Support,Maintenance Due,2026-03-01 05:56:00,Room 108,2,Issued for daily use
+A304,Projector 304,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-02 06:03:00,Room 109,3,Assigned to shared pool
+A305,Webcam 305,Maintenance,Room 110,Room 110,Spare,Front Desk,Good,2026-03-03 07:10:00,Room 110,4,Check accessories before checkout
+A306,Headset 306,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-04 08:17:00,Room 201,5,Scheduled for quarterly review
+A307,Microphone 307,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Needs Battery,N/A,N/A,0,N/A
+A308,Speakerphone 308,Office Equipment,Room 203,Room 203,In Repair,Office Staff,Good,2026-03-06 01:31:00,Room 203,1,N/A
+A309,Printer 309,AV Equipment,Room 204,Room 204,Active,Inventory Team,Good,2026-03-07 02:38:00,Room 204,2,Issued for daily use
+A310,Label Printer 310,Networking,Room 205,Room 210,Spare,Facilities,Good,2026-03-08 03:45:00,Room 210,3,Assigned to shared pool
+A311,Barcode Scanner 311,Power,Room 206,Room 206,Active,Media Team,Maintenance Due,2026-03-09 04:52:00,Room 206,4,Check accessories before checkout
+A312,Receipt Printer 312,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-10 05:59:00,Room 207,5,Scheduled for quarterly review
+A313,Router 313,Safety,Room 208,Room 208,Active,Event Support,Good,N/A,N/A,0,N/A
+A314,Switch 314,Audio,Room 209,Room 209,Active,Security Team,Needs Battery,2026-03-12 07:13:00,Room 209,1,N/A
+A315,Access Point 315,Maintenance,Room 210,Room 210,Spare,Front Desk,Restock Needed,2026-03-13 08:20:00,Room 210,2,Issued for daily use
+A316,Patch Cable 316,IT Equipment,Storage,Storage,Retired,Tech Staff,Needs Replacement,2026-03-14 00:27:00,Storage,3,Assigned to shared pool
+A317,Surge Protector 317,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Good,2026-03-15 01:34:00,Front Office,4,Check accessories before checkout
+A318,Battery Backup 318,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-16 02:41:00,Library,5,Scheduled for quarterly review
+A319,Extension Cord 319,AV Equipment,Media Lab,Media Lab,In Repair,Inventory Team,Maintenance Due,N/A,N/A,0,N/A
+A320,Power Strip 320,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-18 04:55:00,Reception,1,N/A
+A321,Document Camera 321,Power,Receiving,Receiving,Active,Media Team,Needs Battery,2026-03-19 05:02:00,Receiving,2,Issued for daily use
+A322,TV Cart 322,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-20 06:09:00,Workshop,3,Assigned to shared pool
+A323,HDMI Adapter 323,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Maintenance Due,2026-03-21 07:16:00,Janitor Closet,4,Check accessories before checkout
+A324,Portable SSD 324,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-22 08:23:00,Conference Room A,5,Scheduled for quarterly review
+A325,External Hard Drive 325,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Good,N/A,N/A,0,N/A
+A326,Tool Kit 326,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-24 01:37:00,Room 101,1,N/A
+A327,Drill Driver 327,Mobile Device,Room 102,Room 107,Active,Classroom Mgmt,Maintenance Due,2026-03-25 02:44:00,Room 107,2,Issued for daily use
+A328,Vacuum 328,Office Equipment,Room 103,Room 103,Active,Office Staff,Restock Needed,2026-03-26 03:51:00,Room 103,3,Assigned to shared pool
+A329,Air Purifier 329,AV Equipment,Room 104,Room 104,Active,Inventory Team,Good,2026-03-27 04:58:00,Room 104,4,Check accessories before checkout
+A330,Fan 330,Networking,Room 105,Room 105,In Repair,Facilities,Good,2026-03-28 05:05:00,Room 105,5,Scheduled for quarterly review
+A331,First Aid Kit 331,Power,Room 106,Room 106,Active,Media Team,Maintenance Due,N/A,N/A,0,N/A
+A332,Walkie Talkie 332,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-30 07:19:00,Room 107,1,N/A
+A333,Camera 333,Safety,Room 108,Room 108,Active,Event Support,Good,2026-03-31 08:26:00,Room 108,2,Issued for daily use
+A334,Tripod 334,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-01 00:33:00,Room 109,3,Assigned to shared pool
+A335,Lighting Kit 335,Maintenance,Room 110,Room 110,Spare,Front Desk,Needs Battery,2026-03-02 01:40:00,Room 110,4,Check accessories before checkout
+A336,Chromebook 336,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-03 02:47:00,Room 201,5,Scheduled for quarterly review
+A337,Laptop 337,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A338,Tablet 338,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-05 04:01:00,Room 203,1,N/A
+A339,Monitor 339,AV Equipment,Room 204,Room 204,Active,Inventory Team,Maintenance Due,2026-03-06 05:08:00,Room 204,2,Issued for daily use
+A340,Docking Station 340,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-07 06:15:00,Room 205,3,Assigned to shared pool
+A341,Wireless Keyboard 341,Power,Room 206,Room 206,In Repair,Media Team,Restock Needed,2026-03-08 07:22:00,Room 206,4,Check accessories before checkout
+A342,Wireless Mouse 342,Facilities,Room 207,Room 207,Active,Library Staff,Needs Battery,2026-03-09 08:29:00,Room 207,5,Scheduled for quarterly review
+A343,USB-C Charger 343,Safety,Room 208,Room 208,Active,Event Support,Maintenance Due,N/A,N/A,0,N/A
+A344,Projector 344,Audio,Room 209,Media Lab,Active,Security Team,Good,2026-03-11 01:43:00,Media Lab,1,N/A
+A345,Webcam 345,Maintenance,Room 210,Room 210,Retired,Front Desk,Needs Replacement,2026-03-12 02:50:00,Room 210,2,Issued for daily use
+A346,Headset 346,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-13 03:57:00,Storage,3,Assigned to shared pool
+A347,Microphone 347,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Maintenance Due,2026-03-14 04:04:00,Front Office,4,Check accessories before checkout
+A348,Speakerphone 348,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-15 05:11:00,Library,5,Scheduled for quarterly review
+A349,Printer 349,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Needs Battery,N/A,N/A,0,N/A
+A350,Label Printer 350,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-17 07:25:00,Reception,1,N/A
+A351,Barcode Scanner 351,Power,Receiving,Receiving,Active,Media Team,Maintenance Due,2026-03-18 08:32:00,Receiving,2,Issued for daily use
+A352,Receipt Printer 352,Facilities,Workshop,Workshop,In Repair,Library Staff,Good,2026-03-19 00:39:00,Workshop,3,Assigned to shared pool
+A353,Router 353,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Good,2026-03-20 01:46:00,Janitor Closet,4,Check accessories before checkout
+A354,Switch 354,Audio,Conference Room A,Conference Room A,Active,Security Team,Restock Needed,2026-03-21 02:53:00,Conference Room A,5,Scheduled for quarterly review
+A355,Access Point 355,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Maintenance Due,N/A,N/A,0,N/A
+A356,Patch Cable 356,IT Equipment,Room 101,Room 101,Active,Tech Staff,Needs Battery,2026-03-23 04:07:00,Room 101,1,N/A
+A357,Surge Protector 357,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,2026-03-24 05:14:00,Room 102,2,Issued for daily use
+A358,Battery Backup 358,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-25 06:21:00,Room 103,3,Assigned to shared pool
+A359,Extension Cord 359,AV Equipment,Room 104,Room 104,Active,Inventory Team,Maintenance Due,2026-03-26 07:28:00,Room 104,4,Check accessories before checkout
+A360,Power Strip 360,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-27 08:35:00,Room 105,5,Scheduled for quarterly review
+A361,Document Camera 361,Power,Room 106,Room 106,Active,Media Team,Good,N/A,N/A,0,N/A
+A362,TV Cart 362,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-29 01:49:00,Room 107,1,N/A
+A363,HDMI Adapter 363,Safety,Room 108,Room 108,In Repair,Event Support,Needs Battery,2026-03-30 02:56:00,Room 108,2,Issued for daily use
+A364,Portable SSD 364,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-31 03:03:00,Room 109,3,Assigned to shared pool
+A365,External Hard Drive 365,Maintenance,Room 110,Room 110,Spare,Front Desk,Good,2026-03-01 04:10:00,Room 110,4,Check accessories before checkout
+A366,Tool Kit 366,IT Equipment,Room 201,Room 201,Active,Tech Staff,Good,2026-03-02 05:17:00,Room 201,5,Scheduled for quarterly review
+A367,Drill Driver 367,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Restock Needed,N/A,N/A,0,N/A
+A368,Vacuum 368,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-04 07:31:00,Room 203,1,N/A
+A369,Air Purifier 369,AV Equipment,Room 204,Room 204,Active,Inventory Team,Good,2026-03-05 08:38:00,Room 204,2,Issued for daily use
+A370,Fan 370,Networking,Room 205,Room 205,Spare,Facilities,Needs Battery,2026-03-06 00:45:00,Room 205,3,Assigned to shared pool
+A371,First Aid Kit 371,Power,Room 206,Room 206,Active,Media Team,Maintenance Due,2026-03-07 01:52:00,Room 206,4,Check accessories before checkout
+A372,Walkie Talkie 372,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-08 02:59:00,Room 207,5,Scheduled for quarterly review
+A373,Camera 373,Safety,Room 208,Room 208,Active,Event Support,Good,N/A,N/A,0,N/A
+A374,Tripod 374,Audio,Room 209,Room 209,Retired,Security Team,Needs Replacement,2026-03-10 04:13:00,Room 209,1,N/A
+A375,Lighting Kit 375,Maintenance,Room 210,Room 210,Spare,Front Desk,Maintenance Due,2026-03-11 05:20:00,Room 210,2,Issued for daily use
+A376,Chromebook 376,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-12 06:27:00,Storage,3,Assigned to shared pool
+A377,Laptop 377,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Needs Battery,2026-03-13 07:34:00,Front Office,4,Check accessories before checkout
+A378,Tablet 378,Office Equipment,Library,Janitor Closet,Active,Office Staff,Good,2026-03-14 08:41:00,Janitor Closet,5,Scheduled for quarterly review
+A379,Monitor 379,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Maintenance Due,N/A,N/A,0,N/A
+A380,Docking Station 380,Networking,Reception,Reception,Spare,Facilities,Restock Needed,2026-03-16 01:55:00,Reception,1,N/A
+A381,Wireless Keyboard 381,Power,Receiving,Receiving,Active,Media Team,Good,2026-03-17 02:02:00,Receiving,2,Issued for daily use
+A382,Wireless Mouse 382,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-18 03:09:00,Workshop,3,Assigned to shared pool
+A383,USB-C Charger 383,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Maintenance Due,2026-03-19 04:16:00,Janitor Closet,4,Check accessories before checkout
+A384,Projector 384,Audio,Conference Room A,Conference Room A,Active,Security Team,Needs Battery,2026-03-20 05:23:00,Conference Room A,5,Scheduled for quarterly review
+A385,Webcam 385,Maintenance,Conference Room B,Conference Room B,In Repair,Front Desk,Good,N/A,N/A,0,N/A
+A386,Headset 386,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-22 07:37:00,Room 101,1,N/A
+A387,Microphone 387,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Maintenance Due,2026-03-23 08:44:00,Room 102,2,Issued for daily use
+A388,Speakerphone 388,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-24 00:51:00,Room 103,3,Assigned to shared pool
+A389,Printer 389,AV Equipment,Room 104,Room 104,Active,Inventory Team,Good,2026-03-25 01:58:00,Room 104,4,Check accessories before checkout
+A390,Label Printer 390,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-26 02:05:00,Room 105,5,Scheduled for quarterly review
+A391,Barcode Scanner 391,Power,Room 106,Room 106,Active,Media Team,Needs Battery,N/A,N/A,0,N/A
+A392,Receipt Printer 392,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-28 04:19:00,Room 107,1,N/A
+A393,Router 393,Safety,Room 108,Room 108,Active,Event Support,Restock Needed,2026-03-29 05:26:00,Room 108,2,Issued for daily use
+A394,Switch 394,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-30 06:33:00,Room 109,3,Assigned to shared pool
+A395,Access Point 395,Maintenance,Room 110,Room 205,Spare,Front Desk,Maintenance Due,2026-03-31 07:40:00,Room 205,4,Check accessories before checkout
+A396,Patch Cable 396,IT Equipment,Room 201,Room 201,In Repair,Tech Staff,Good,2026-03-01 08:47:00,Room 201,5,Scheduled for quarterly review
+A397,Surge Protector 397,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A398,Battery Backup 398,Office Equipment,Room 203,Room 203,Active,Office Staff,Needs Battery,2026-03-03 01:01:00,Room 203,1,N/A
+A399,Extension Cord 399,AV Equipment,Room 204,Room 204,Active,Inventory Team,Maintenance Due,2026-03-04 02:08:00,Room 204,2,Issued for daily use
+A400,Power Strip 400,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-05 03:15:00,Room 205,3,Assigned to shared pool
+A401,Document Camera 401,Power,Room 206,Room 206,Active,Media Team,Good,2026-03-06 04:22:00,Room 206,4,Check accessories before checkout
+A402,TV Cart 402,Facilities,Room 207,Room 207,Active,Library Staff,Good,2026-03-07 05:29:00,Room 207,5,Scheduled for quarterly review
+A403,HDMI Adapter 403,Safety,Room 208,Room 208,Retired,Event Support,Needs Replacement,N/A,N/A,0,N/A
+A404,Portable SSD 404,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-09 07:43:00,Room 209,1,N/A
+A405,External Hard Drive 405,Maintenance,Room 210,Room 210,Spare,Front Desk,Needs Battery,2026-03-10 08:50:00,Room 210,2,Issued for daily use
+A406,Tool Kit 406,IT Equipment,Storage,Storage,Active,Tech Staff,Restock Needed,2026-03-11 00:57:00,Storage,3,Assigned to shared pool
+A407,Drill Driver 407,Mobile Device,Front Office,Front Office,In Repair,Classroom Mgmt,Maintenance Due,2026-03-12 01:04:00,Front Office,4,Check accessories before checkout
+A408,Vacuum 408,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-13 02:11:00,Library,5,Scheduled for quarterly review
+A409,Air Purifier 409,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Good,N/A,N/A,0,N/A
+A410,Fan 410,Networking,Reception,Reception,Spare,Facilities,Good,2026-03-15 04:25:00,Reception,1,N/A
+A411,First Aid Kit 411,Power,Receiving,Receiving,Active,Media Team,Maintenance Due,2026-03-16 05:32:00,Receiving,2,Issued for daily use
+A412,Walkie Talkie 412,Facilities,Workshop,Room 102,Active,Library Staff,Needs Battery,2026-03-17 06:39:00,Room 102,3,Assigned to shared pool
+A413,Camera 413,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Good,2026-03-18 07:46:00,Janitor Closet,4,Check accessories before checkout
+A414,Tripod 414,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-19 08:53:00,Conference Room A,5,Scheduled for quarterly review
+A415,Lighting Kit 415,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Maintenance Due,N/A,N/A,0,N/A
+A416,Chromebook 416,IT Equipment,Room 101,Room 101,Active,Tech Staff,Good,2026-03-21 01:07:00,Room 101,1,N/A
+A417,Laptop 417,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,2026-03-22 02:14:00,Room 102,2,Issued for daily use
+A418,Tablet 418,Office Equipment,Room 103,Room 103,In Repair,Office Staff,Good,2026-03-23 03:21:00,Room 103,3,Assigned to shared pool
+A419,Monitor 419,AV Equipment,Room 104,Room 104,Active,Inventory Team,Restock Needed,2026-03-24 04:28:00,Room 104,4,Check accessories before checkout
+A420,Docking Station 420,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-25 05:35:00,Room 105,5,Scheduled for quarterly review
+A421,Wireless Keyboard 421,Power,Room 106,Room 106,Active,Media Team,Good,N/A,N/A,0,N/A
+A422,Wireless Mouse 422,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-27 07:49:00,Room 107,1,N/A
+A423,USB-C Charger 423,Safety,Room 108,Room 108,Active,Event Support,Maintenance Due,2026-03-28 08:56:00,Room 108,2,Issued for daily use
+A424,Projector 424,Audio,Room 109,Room 109,Active,Security Team,Good,2026-03-29 00:03:00,Room 109,3,Assigned to shared pool
+A425,Webcam 425,Maintenance,Room 110,Room 110,Spare,Front Desk,Good,2026-03-30 01:10:00,Room 110,4,Check accessories before checkout
+A426,Headset 426,IT Equipment,Room 201,Room 201,Active,Tech Staff,Needs Battery,2026-03-31 02:17:00,Room 201,5,Scheduled for quarterly review
+A427,Microphone 427,Mobile Device,Room 202,Room 202,Active,Classroom Mgmt,Maintenance Due,N/A,N/A,0,N/A
+A428,Speakerphone 428,Office Equipment,Room 203,Room 203,Active,Office Staff,Good,2026-03-02 04:31:00,Room 203,1,N/A
+A429,Printer 429,AV Equipment,Room 204,Room 209,In Repair,Inventory Team,Good,2026-03-03 05:38:00,Room 209,2,Issued for daily use
+A430,Label Printer 430,Networking,Room 205,Room 205,Spare,Facilities,Good,2026-03-04 06:45:00,Room 205,3,Assigned to shared pool
+A431,Barcode Scanner 431,Power,Room 206,Room 206,Active,Media Team,Maintenance Due,2026-03-05 07:52:00,Room 206,4,Check accessories before checkout
+A432,Receipt Printer 432,Facilities,Room 207,Room 207,Retired,Library Staff,Needs Replacement,2026-03-06 08:59:00,Room 207,5,Scheduled for quarterly review
+A433,Router 433,Safety,Room 208,Room 208,Active,Event Support,Needs Battery,N/A,N/A,0,N/A
+A434,Switch 434,Audio,Room 209,Room 209,Active,Security Team,Good,2026-03-08 01:13:00,Room 209,1,N/A
+A435,Access Point 435,Maintenance,Room 210,Room 210,Spare,Front Desk,Maintenance Due,2026-03-09 02:20:00,Room 210,2,Issued for daily use
+A436,Patch Cable 436,IT Equipment,Storage,Storage,Active,Tech Staff,Good,2026-03-10 03:27:00,Storage,3,Assigned to shared pool
+A437,Surge Protector 437,Mobile Device,Front Office,Front Office,Active,Classroom Mgmt,Good,2026-03-11 04:34:00,Front Office,4,Check accessories before checkout
+A438,Battery Backup 438,Office Equipment,Library,Library,Active,Office Staff,Good,2026-03-12 05:41:00,Library,5,Scheduled for quarterly review
+A439,Extension Cord 439,AV Equipment,Media Lab,Media Lab,Active,Inventory Team,Maintenance Due,N/A,N/A,0,N/A
+A440,Power Strip 440,Networking,Reception,Reception,In Repair,Facilities,Needs Battery,2026-03-14 07:55:00,Reception,1,N/A
+A441,Document Camera 441,Power,Receiving,Receiving,Active,Media Team,Good,2026-03-15 08:02:00,Receiving,2,Issued for daily use
+A442,TV Cart 442,Facilities,Workshop,Workshop,Active,Library Staff,Good,2026-03-16 00:09:00,Workshop,3,Assigned to shared pool
+A443,HDMI Adapter 443,Safety,Janitor Closet,Janitor Closet,Active,Event Support,Maintenance Due,2026-03-17 01:16:00,Janitor Closet,4,Check accessories before checkout
+A444,Portable SSD 444,Audio,Conference Room A,Conference Room A,Active,Security Team,Good,2026-03-18 02:23:00,Conference Room A,5,Scheduled for quarterly review
+A445,External Hard Drive 445,Maintenance,Conference Room B,Conference Room B,Spare,Front Desk,Restock Needed,N/A,N/A,0,N/A
+A446,Tool Kit 446,IT Equipment,Room 101,Room 106,Active,Tech Staff,Good,2026-03-20 04:37:00,Room 106,1,N/A
+A447,Drill Driver 447,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Needs Battery,2026-03-21 05:44:00,Room 102,2,Issued for daily use
+A448,Vacuum 448,Office Equipment,Room 103,Room 103,Active,Office Staff,Good,2026-03-22 06:51:00,Room 103,3,Assigned to shared pool
+A449,Air Purifier 449,AV Equipment,Room 104,Room 104,Active,Inventory Team,Good,2026-03-23 07:58:00,Room 104,4,Check accessories before checkout
+A450,Fan 450,Networking,Room 105,Room 105,Spare,Facilities,Good,2026-03-24 08:05:00,Room 105,5,Scheduled for quarterly review
+A451,First Aid Kit 451,Power,Room 106,Room 106,In Repair,Media Team,Maintenance Due,N/A,N/A,0,N/A
+A452,Walkie Talkie 452,Facilities,Room 107,Room 107,Active,Library Staff,Good,2026-03-26 01:19:00,Room 107,1,N/A
+A453,Camera 453,Safety,Room 108,Room 108,Active,Event Support,Good,2026-03-27 02:26:00,Room 108,2,Issued for daily use
+A454,Tripod 454,Audio,Room 109,Room 109,Active,Security Team,Needs Battery,2026-03-28 03:33:00,Room 109,3,Assigned to shared pool
+A455,Lighting Kit 455,Maintenance,Room 110,Room 110,Spare,Front Desk,Maintenance Due,2026-03-29 04:40:00,Room 110,4,Check accessories before checkout
+

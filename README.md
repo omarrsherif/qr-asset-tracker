@@ -9,7 +9,7 @@ The app includes three main flows:
 - `Create`
 - `Browse`
 
-It also keeps the original console demo in `asset_inventory_demo.py` for comparison and simple terminal-based testing.
+It also keeps the original console demo in `asset_inventory.py` for comparison and simple terminal-based testing.
 
 ## Current Features
 
@@ -82,7 +82,7 @@ Examples:
 ```text
 app.py
 assets_demo.csv
-asset_inventory_demo.py
+asset_inventory.py
 generate_qrcodes.py
 requirements.txt
 README.md
@@ -99,7 +99,7 @@ qrcodes/
 - `assets_demo.csv`
   Demo inventory data used by both the web app and the console demo.
 
-- `asset_inventory_demo.py`
+- `asset_inventory.py`
   Original console-based inventory demo script.
 
 - `generate_qrcodes.py`
@@ -267,7 +267,7 @@ Older `NA` values are normalized automatically when data is loaded and saved.
 The original terminal version still exists in:
 
 ```text
-asset_inventory_demo.py
+asset_inventory.py
 ```
 
 That script is useful if you want a simpler console-based example alongside the Flask version.
