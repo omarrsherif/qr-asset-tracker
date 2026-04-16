@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Update Asset{% endblock %}
+
+{% block content %}
+<div class="page-heading d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div>
+        <h1>Update {{ asset.asset_id }}</h1>
+        <p>Review the current asset details and save the latest scan information.</p>
+    </div>
+    <a class="btn btn-outline-secondary btn-icon" href="{{ url_for('back_from_scan') }}">
+        <i class="bi bi-arrow-left"></i>Back
+    </a>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-xl-4">
+        <div class="card summary-card h-100">
+            <div class="card-body p-4">
+                <div class="section-label mb-2">Asset Summary</div>
+                <h2 class="h5 mb-3">{{ asset.item_name }}</h2>
+                <div class="d-grid gap-3">
+                    <div class="summary-stat"><span class="label">Asset ID</span><span class="value">{{ asset.asset_id }}</span></div>
+                    <div class="summary-stat"><span class="label">Expected location</span><span class="value">{{ asset.expected_location }}</span></div>
+                    <div class="summary-stat"><span class="label">Current location</span><span class="value">{{ asset.current_location }}</span></div>
+                    <div class="summary-stat"><span class="label">Last scanned</span><span class="value">{{ asset.last_scanned }}</span></div>
+                    <div class="summary-stat"><span class="label">Scan count</span><span class="value">{{ asset.scan_count }}</span></div>
+                    <div class="summary-stat"><span class="label">Notes</span><span class="value">{{ asset.notes }}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-xl-8">
+        <div class="card form-card">
+            <div class="card-body p-4 p-lg-5">
+                {% if errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in errors %}
+                            <div>{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if warnings %}
+                    <div class="alert alert-warning" role="alert">
+                        {% for warning in warnings %}
+                            <div>{{ warning }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <form action="{{ url_for('submit_scan', asset_id=asset.asset_id) }}" method="post" class="d-grid gap-4">
+                    <div>
+                        <div class="form-section-title">Update details</div>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="scan_location">Scan location</label>
+                                <input class="form-control" id="scan_location" name="scan_location" value="{{ form_values.get('scan_location', '') }}" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="status">Status</label>
+                                <select class="form-select choice-select" id="status" name="status" required>
+                                    <option value="">Choose status</option>
+                                    {% for option in status_options %}
+                                        <option value="{{ option }}" {% if form_values.get('status', asset.status) == option %}selected{% endif %}>{{ option }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="maintenance_state">Maintenance state</label>
+                                <select class="form-select choice-select" id="maintenance_state" name="maintenance_state">
+                                    <option value="N/A" {% if form_values.get('maintenance_state', asset.maintenance_state) == 'N/A' %}selected{% endif %}>N/A</option>
+                                    {% for option in maintenance_options %}
+                                        <option value="{{ option }}" {% if form_values.get('maintenance_state', asset.maintenance_state) == option %}selected{% endif %}>{{ option }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="notes">Notes</label>
+                                <textarea class="form-control" id="notes" name="notes" rows="4" required>{{ form_values.get('notes', asset.notes if asset.notes != 'N/A' else '') }}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sticky-actions">
+                        <button class="btn btn-primary btn-lg" type="submit">Save scan update</button>
+                        <a class="btn btn-outline-primary" href="{{ url_for('reset_scan_page') }}">Scan next item</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Scan Saved{% endblock %}
+
+{% block content %}
+<div class="page-heading d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div>
+        <h1>Item Updated</h1>
+        <p>The asset record was saved successfully.</p>
+    </div>
+    <a class="btn btn-outline-secondary btn-icon" href="{{ url_for('back_from_scan') }}">
+        <i class="bi bi-arrow-left"></i>Back
+    </a>
+</div>
+
+<div class="card form-card">
+    <div class="card-body p-4 p-lg-5">
+        <div class="alert alert-success" role="alert">The asset record was updated in the CSV file.</div>
+
+        {% if warnings %}
+            <div class="alert alert-warning" role="alert">
+                {% for warning in warnings %}
+                    <div>{{ warning }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6">
+                <div class="summary-stat"><span class="label">Asset ID</span><span class="value">{{ asset.asset_id }}</span></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="summary-stat"><span class="label">Item</span><span class="value">{{ asset.item_name }}</span></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="summary-stat"><span class="label">Current location</span><span class="value">{{ asset.current_location }}</span></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="summary-stat"><span class="label">Status</span><span class="value">{{ asset.status }}</span></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="summary-stat"><span class="label">Maintenance</span><span class="value">{{ asset.maintenance_state }}</span></div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="summary-stat"><span class="label">Last scanned</span><span class="value">{{ asset.last_scanned }}</span></div>
+            </div>
+        </div>
+
+        <div class="sticky-actions">
+            <a class="btn btn-primary" href="{{ url_for('reset_scan_page') }}">Scan next item</a>
+            <a class="btn btn-outline-primary" href="{{ url_for('add_item') }}">Add another item</a>
+            <a class="btn btn-outline-secondary" href="{{ url_for('back_from_scan') }}">Back</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

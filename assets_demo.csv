@@ -1,0 +1,56 @@
+asset_id,item_name,category,expected_location,current_location,status,owner,maintenance_state,last_scanned,last_scan_location,scan_count,notes
+A001,HDMI Cable,AV Accessory,Room 101,Room 101,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A002,Projector Remote,AV Accessory,Room 203,Room 203,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A003,Laptop Charger,Power,Storage,Storage,Spare,Tech Staff,Good,N/A,N/A,0,N/A
+A004,Document Camera,AV Equipment,Room 110,Room 110,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A005,Wireless Mic,Audio,Room 205,Room 205,Active,Event Support,Needs Battery,N/A,N/A,0,N/A
+A006,Tablet Cart,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A007,Extension Cord,Power,Storage,Storage,Spare,Facilities,Good,N/A,N/A,0,N/A
+A008,Ceiling Projector,AV Equipment,Room 204,Room 204,Active,Classroom Mgmt,Maintenance Due,N/A,N/A,0,N/A
+A009,Bluetooth Speaker,Audio,Room 109,Room 109,Active,Media Team,Good,N/A,N/A,0,N/A
+A010,Label Printer,Office Equipment,Front Office,Front Office,Active,Office Staff,Good,N/A,N/A,0,N/A
+A011,Barcode Scanner,IT Equipment,Receiving,Receiving,Active,Inventory Team,Good,N/A,N/A,0,N/A
+A012,Network Switch,Networking,Server Closet,Server Closet,Active,IT Department,Good,N/A,N/A,0,N/A
+A013,USB-C Dock,Computer Accessory,Room 112,Room 112,Active,Tech Staff,Good,N/A,N/A,0,N/A
+A014,Monitor 24in,Display,Lab 1,Lab 1,Active,Computer Lab,Good,N/A,N/A,0,N/A
+A015,Keyboard,Computer Accessory,Lab 1,Lab 1,Active,Computer Lab,Good,N/A,N/A,0,N/A
+A016,Mouse,Computer Accessory,Lab 1,Lab 1,Active,Computer Lab,Good,N/A,N/A,0,N/A
+A017,Printer Toner,Supply,Storage,Storage,Spare,Office Staff,Good,N/A,N/A,0,N/A
+A018,Portable Screen,AV Equipment,Gym,Gym,Active,Event Support,Good,N/A,N/A,0,N/A
+A019,Webcam,AV Accessory,Room 207,Room 207,Active,Distance Learning,Good,N/A,N/A,0,N/A
+A020,Headset,Audio,Lab 2,Lab 2,Active,Computer Lab,Good,N/A,N/A,0,N/A
+A021,Conference Phone,Telecom,Admin Office,Admin Office,Active,Administration,Good,N/A,N/A,0,N/A
+A022,Surge Protector,Power,Room 111,Room 111,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A023,Rolling Whiteboard,Furniture,Room 120,Room 120,Active,Facilities,Good,N/A,N/A,0,N/A
+A024,Laser Pointer,AV Accessory,Room 203,Room 203,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A025,Chromebook,Mobile Device,Cart Bay,Cart Bay,Active,Student Devices,Good,N/A,N/A,0,N/A
+A026,Charging Cable,Power,Cart Bay,Cart Bay,Spare,Student Devices,Good,N/A,N/A,0,N/A
+A027,Microphone Stand,Audio,Auditorium,Auditorium,Active,Event Support,Good,N/A,N/A,0,N/A
+A028,Mixer Board,Audio,Auditorium,Auditorium,Active,Media Team,Maintenance Due,N/A,N/A,0,N/A
+A029,Stage Light,Lighting,Auditorium,Auditorium,Active,Event Support,Good,N/A,N/A,0,N/A
+A030,Desktop PC,Computer,Lab 2,Lab 2,Active,Computer Lab,Good,N/A,N/A,0,N/A
+A031,UPS Battery,Power,Server Closet,Server Closet,Active,IT Department,Needs Replacement,N/A,N/A,0,N/A
+A032,Patch Cable,Networking,Server Closet,Server Closet,Spare,IT Department,Good,N/A,N/A,0,N/A
+A033,Access Point,Networking,Hallway East,Hallway East,Active,IT Department,Good,N/A,N/A,0,N/A
+A034,Scanner Flatbed,Office Equipment,Records Room,Records Room,Active,Office Staff,Good,N/A,N/A,0,N/A
+A035,Paper Shredder,Office Equipment,Front Office,Front Office,Active,Office Staff,Maintenance Due,N/A,N/A,0,N/A
+A036,Digital Camera,AV Equipment,Media Room,Media Room,Active,Media Team,Good,N/A,N/A,0,N/A
+A037,Tripod,AV Accessory,Media Room,Media Room,Active,Media Team,Good,N/A,N/A,0,N/A
+A038,Portable SSD,Storage Device,Media Room,Media Room,Active,Media Team,Good,N/A,N/A,0,N/A
+A039,Router,Networking,Server Closet,Server Closet,Active,IT Department,Good,N/A,N/A,0,N/A
+A040,Laminator,Office Equipment,Workroom,Workroom,Active,Office Staff,Good,N/A,N/A,0,N/A
+A041,Hotspot Device,Networking,Tech Office,Tech Office,Active,Tech Staff,Good,N/A,N/A,0,N/A
+A042,Smart Board,AV Equipment,Room 118,Room 118,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
+A043,TV Display 55in,Display,Student Center,Student Center,Active,Student Services,Good,N/A,N/A,0,N/A
+A044,Receipt Printer,Office Equipment,Bookstore,Bookstore,Active,Bookstore Staff,Good,N/A,N/A,0,N/A
+A045,Cash Drawer,Office Equipment,Bookstore,Bookstore,Active,Bookstore Staff,Good,N/A,N/A,0,N/A
+A046,Walkie Talkie,Communications,Security Desk,Security Desk,Active,Security,Needs Battery,N/A,N/A,0,N/A
+A047,First Aid Kit,Safety,Gym,Gym,Active,Facilities,Restock Needed,N/A,N/A,0,N/A
+A048,Vacuum Cleaner,Facilities,Janitor Closet,Janitor Closet,Active,Custodial,Good,N/A,N/A,0,N/A
+A049,Tool Kit,Maintenance,Workshop,Workshop,Active,Facilities,Good,N/A,N/A,0,N/A
+A050,Electric Drill,Maintenance,Workshop,Workshop,Active,Facilities,Good,N/A,N/A,0,N/A
+A051,Folding Table,Furniture,Storage,Storage,Active,Event Support,Good,N/A,N/A,0,N/A
+A052,Folding Chair,Furniture,Storage,Storage,Active,Event Support,Good,N/A,N/A,0,N/A
+A053,Ipad,Mobile Device,Library,Library,Active,Library Staff,Good,N/A,N/A,0,N/A
+A054,E-reader,Mobile Device,Library,Library,Active,Library Staff,Good,N/A,N/A,0,N/A
+A055,Checkout Scanner,IT Equipment,Library,Library,Active,Library Staff,Good,N/A,N/A,0,N/A

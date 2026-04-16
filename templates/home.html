@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Inventory Home{% endblock %}
+
+{% block content %}
+<div class="page-heading">
+    <h1>Inventory Tools</h1>
+    <p>Choose what you want to do next. The scan, add, and asset lookup tools each stay in their own flow until you press Back.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-lg-4">
+        <a class="card action-card text-decoration-none h-100" href="{{ url_for('scan_page') }}">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-start justify-content-between mb-3">
+                    <span class="action-icon"><i class="bi bi-qr-code-scan"></i></span>
+                    <span class="badge text-bg-primary-subtle text-primary-emphasis rounded-pill">Scan</span>
+                </div>
+                <h2 class="h4 mb-2 text-dark">Scan</h2>
+                <p class="text-secondary mb-0">Upload a QR image, find the matching asset, and continue to the update form.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <a class="card action-card text-decoration-none h-100" href="{{ url_for('add_item') }}">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-start justify-content-between mb-3">
+                    <span class="action-icon"><i class="bi bi-plus-square"></i></span>
+                    <span class="badge text-bg-primary-subtle text-primary-emphasis rounded-pill">Create</span>
+                </div>
+                <h2 class="h4 mb-2 text-dark">Create</h2>
+                <p class="text-secondary mb-0">Create a new inventory record and save it directly to the CSV file.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <a class="card action-card text-decoration-none h-100" href="{{ url_for('assets_page') }}">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-start justify-content-between mb-3">
+                    <span class="action-icon"><i class="bi bi-table"></i></span>
+                    <span class="badge text-bg-primary-subtle text-primary-emphasis rounded-pill">Browse</span>
+                </div>
+                <h2 class="h4 mb-2 text-dark">Browse</h2>
+                <p class="text-secondary mb-0">Search the inventory, browse all items, and open an asset detail page.</p>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

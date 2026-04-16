@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Asset {{ asset.asset_id }}{% endblock %}
+
+{% block content %}
+<div class="page-heading d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div>
+        <h1>{{ asset.asset_id }}</h1>
+        <p>Review the current inventory details for this asset.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-outline-primary" href="{{ url_for('scan_details', asset_id=asset.asset_id) }}">Update item</a>
+        <a class="btn btn-outline-secondary btn-icon" href="{{ url_for('assets_page') }}">
+            <i class="bi bi-arrow-left"></i>Back
+        </a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-xl-4">
+        <div class="card summary-card h-100">
+            <div class="card-body p-4">
+                <div class="section-label mb-2">Quick Summary</div>
+                <h2 class="h5 mb-3">{{ asset.item_name }}</h2>
+                <div class="d-grid gap-3">
+                    <div class="summary-stat"><span class="label">Status</span><span class="value">{{ asset.status }}</span></div>
+                    <div class="summary-stat"><span class="label">Owner</span><span class="value">{{ asset.owner }}</span></div>
+                    <div class="summary-stat"><span class="label">Scan count</span><span class="value">{{ asset.scan_count }}</span></div>
+                    <div class="summary-stat"><span class="label">Last scanned</span><span class="value">{{ asset.last_scanned }}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-xl-8">
+        <div class="card form-card">
+            <div class="card-body p-4 p-lg-5">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <div class="summary-stat"><span class="label">Category</span><span class="value">{{ asset.category }}</span></div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="summary-stat"><span class="label">Maintenance state</span><span class="value">{{ asset.maintenance_state }}</span></div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="summary-stat"><span class="label">Expected location</span><span class="value">{{ asset.expected_location }}</span></div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="summary-stat"><span class="label">Current location</span><span class="value">{{ asset.current_location }}</span></div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="summary-stat"><span class="label">Last scan location</span><span class="value">{{ asset.last_scan_location }}</span></div>
+                    </div>
+                    <div class="col-12">
+                        <div class="summary-stat"><span class="label">Notes</span><span class="value">{{ asset.notes }}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

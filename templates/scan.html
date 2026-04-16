@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Scan QR{% endblock %}
+
+{% block content %}
+<div class="page-heading d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div>
+        <h1>Scan Item</h1>
+        <p>Upload a QR image to find an asset, or enter the asset ID manually if needed.</p>
+    </div>
+    <a class="btn btn-outline-secondary btn-icon" href="{{ url_for('back_from_scan') }}">
+        <i class="bi bi-arrow-left"></i>Back
+    </a>
+</div>
+
+<div class="card form-card">
+    <div class="card-body p-4 p-lg-5">
+        <div class="row g-4">
+            <div class="col-12 col-xl-7">
+                <div class="upload-box h-100">
+                    <div class="section-label mb-2">QR Upload</div>
+                    <h2 class="h5 mb-2">Upload a QR photo</h2>
+                    <p class="text-secondary mb-3">On phones, this usually opens the camera, photo library, or file browser.</p>
+                    <form action="{{ url_for('scan_photo_lookup') }}" method="post" enctype="multipart/form-data" class="d-grid gap-3">
+                        <div>
+                            <label class="form-label" for="qr_image">QR image</label>
+                            <input class="form-control" id="qr_image" name="qr_image" type="file" accept="image/*" capture="environment" required>
+                        </div>
+                        <button class="btn btn-primary btn-lg" type="submit">Read QR from photo</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-xl-5">
+                <div class="card summary-card h-100">
+                    <div class="card-body p-4">
+                        <div class="section-label mb-2">Manual Lookup</div>
+                        <h2 class="h5 mb-2">Enter asset ID</h2>
+                        <p class="text-secondary mb-3">Use manual lookup if the photo does not read correctly.</p>
+                        <form action="{{ url_for('scan_lookup') }}" method="post" class="d-grid gap-3">
+                            <div>
+                                <label class="form-label" for="asset_id">Asset ID</label>
+                                <input class="form-control" id="asset_id" name="asset_id" placeholder="A001" autocomplete="off" required>
+                            </div>
+                            <button class="btn btn-outline-primary" type="submit">Continue manually</button>
+                        </form>
+                        <div class="small text-secondary mt-3">
+                            For best results, use a clear photo where the QR code fills a good portion of the image.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Assets{% endblock %}
+
+{% block content %}
+<div class="page-heading d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div>
+        <h1>Browse Assets</h1>
+        <p>Search the inventory by asset ID, item name, category, owner, status, or location.</p>
+    </div>
+    <a class="btn btn-outline-secondary btn-icon" href="{{ url_for('home') }}">
+        <i class="bi bi-arrow-left"></i>Back
+    </a>
+</div>
+
+<div class="row g-4">
+    <div class="col-12 col-xl-4">
+        <div class="card summary-card h-100">
+            <div class="card-body p-4">
+                <div class="section-label mb-2">Browse Summary</div>
+                <h2 class="h5 mb-3">Inventory search</h2>
+                <div class="d-grid gap-3">
+                    <div class="summary-stat">
+                        <span class="label">Visible assets</span>
+                        <span class="value">{{ assets|length }}</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="label">Search mode</span>
+                        <span class="value">{{ "Filtered results" if query else "All assets" }}</span>
+                    </div>
+                    <div class="summary-stat">
+                        <span class="label">Current query</span>
+                        <span class="value">{{ query if query else "Showing everything" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-xl-8">
+        <div class="card form-card h-100">
+            <div class="card-body p-4 p-lg-5">
+                <div class="section-label mb-2">Find Assets</div>
+                <h2 class="h5 mb-2">Search the inventory</h2>
+                <p class="text-secondary mb-4">Use any keyword from the record, including item names, locations, categories, owners, or asset IDs.</p>
+
+                <form method="get" action="{{ url_for('assets_page') }}" class="row g-3 align-items-end">
+                    <div class="col-12 col-lg-8">
+                        <label class="form-label" for="q">Search assets</label>
+                        <input class="form-control" id="q" name="q" value="{{ query }}" placeholder="Try A001, projector, Room 101, Active, Classroom Mgmt">
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 d-grid">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 d-grid">
+                        <a class="btn btn-outline-primary" href="{{ url_for('assets_page') }}">Clear</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card form-card mt-4">
+    <div class="card-body p-4 p-lg-5">
+        <div class="section-label mb-2">Results</div>
+        <h2 class="h5 mb-2">Matching assets</h2>
+        <p class="text-secondary mb-4">Open any record to review its details or continue into the update flow.</p>
+
+        {% if assets %}
+            <div class="asset-grid">
+                {% for asset in assets %}
+                    <a class="asset-list-card text-decoration-none" href="{{ url_for('asset_detail', asset_id=asset.asset_id) }}">
+                        <div class="asset-list-top">
+                            <div>
+                                <div class="asset-id">{{ asset.asset_id }}</div>
+                                <h3 class="asset-name">{{ asset.item_name }}</h3>
+                            </div>
+                            <span class="asset-open-link">Open <i class="bi bi-arrow-right"></i></span>
+                        </div>
+                        <div class="asset-chip-row">
+                            <span class="asset-chip">{{ asset.category }}</span>
+                            <span class="asset-chip">{{ asset.status }}</span>
+                        </div>
+                        <div class="asset-meta-grid">
+                            <div class="summary-stat">
+                                <span class="label">Current location</span>
+                                <span class="value">{{ asset.current_location }}</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="label">Owner</span>
+                                <span class="value">{{ asset.owner }}</span>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state">
+                <div class="action-icon mb-3"><i class="bi bi-search"></i></div>
+                <h3 class="h5 mb-2">No assets matched your search</h3>
+                <p class="text-secondary mb-0">Try a different asset ID, item name, location, owner, or category.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
