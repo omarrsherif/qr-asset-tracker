@@ -9,7 +9,7 @@
         <p>Review the current asset details and save the latest scan information.</p>
     </div>
     <a class="btn btn-outline-secondary btn-icon" href="{{ url_for('back_from_scan') }}">
-        <i class="bi bi-arrow-left"></i>Back
+        <i class="bi bi-x-lg"></i>Cancel
     </a>
 </div>
 
@@ -78,7 +78,7 @@
                             </div>
                             <div class="col-12">
                                 <label class="form-label" for="notes">Notes</label>
-                                <textarea class="form-control" id="notes" name="notes" rows="4" required>{{ form_values.get('notes', asset.notes if asset.notes != 'N/A' else '') }}</textarea>
+                                <textarea class="form-control" id="notes" name="notes" rows="4">{{ form_values.get('notes', asset.notes if asset.notes != 'N/A' else '') }}</textarea>
                             </div>
                         </div>
                     </div>

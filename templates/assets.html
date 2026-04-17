@@ -75,12 +75,13 @@
                             <div>
                                 <div class="asset-id">{{ asset.asset_id }}</div>
                                 <h3 class="asset-name">{{ asset.item_name }}</h3>
+                                <p class="asset-subtitle mb-0">{{ asset.category }} / {{ asset.owner }}</p>
                             </div>
                             <span class="asset-open-link">Open <i class="bi bi-arrow-right"></i></span>
                         </div>
                         <div class="asset-chip-row">
-                            <span class="asset-chip">{{ asset.category }}</span>
                             <span class="asset-chip">{{ asset.status }}</span>
+                            <span class="asset-chip">{{ asset.maintenance_state }}</span>
                         </div>
                         <div class="asset-meta-grid">
                             <div class="summary-stat">
@@ -88,8 +89,20 @@
                                 <span class="value">{{ asset.current_location }}</span>
                             </div>
                             <div class="summary-stat">
+                                <span class="label">Expected location</span>
+                                <span class="value">{{ asset.expected_location }}</span>
+                            </div>
+                            <div class="summary-stat">
                                 <span class="label">Owner</span>
                                 <span class="value">{{ asset.owner }}</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="label">Last scanned</span>
+                                <span class="value">{{ asset.last_scanned }}</span>
+                            </div>
+                            <div class="summary-stat">
+                                <span class="label">Notes</span>
+                                <span class="value">{{ asset.notes }}</span>
                             </div>
                         </div>
                     </a>

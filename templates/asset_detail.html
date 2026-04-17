@@ -25,6 +25,7 @@
                 <div class="d-grid gap-3">
                     <div class="summary-stat"><span class="label">Status</span><span class="value">{{ asset.status }}</span></div>
                     <div class="summary-stat"><span class="label">Owner</span><span class="value">{{ asset.owner }}</span></div>
+                    <div class="summary-stat"><span class="label">Current location</span><span class="value">{{ asset.current_location }}</span></div>
                     <div class="summary-stat"><span class="label">Scan count</span><span class="value">{{ asset.scan_count }}</span></div>
                     <div class="summary-stat"><span class="label">Last scanned</span><span class="value">{{ asset.last_scanned }}</span></div>
                 </div>
@@ -32,26 +33,75 @@
         </div>
     </div>
     <div class="col-12 col-xl-8">
-        <div class="card form-card">
+        <div class="card form-card h-100">
             <div class="card-body p-4 p-lg-5">
-                <div class="row g-3">
-                    <div class="col-12 col-md-6">
-                        <div class="summary-stat"><span class="label">Category</span><span class="value">{{ asset.category }}</span></div>
+                <div class="section-label mb-2">Asset Details</div>
+                <h2 class="h5 mb-2">Selected item</h2>
+                <p class="text-secondary mb-4">Opening an item now shows its stored record details and the QR code linked to this asset ID.</p>
+
+                <div class="row g-4 align-items-start">
+                    <div class="col-12 col-lg-5">
+                        <div class="qr-panel h-100">
+                            <div class="summary-stat qr-summary-card">
+                                <span class="label">Asset ID</span>
+                                <span class="value">{{ asset.asset_id }}</span>
+                            </div>
+
+                            {% if qr_image_available %}
+                                <div class="qr-image-card">
+                                    <img
+                                        class="qr-image"
+                                        src="{{ qr_image_url }}"
+                                        alt="QR code for asset {{ asset.asset_id }}"
+                                    >
+                                </div>
+                                <p class="qr-caption mb-0">Scan this QR code to look up <strong>{{ asset.asset_id }}</strong> in the update flow.</p>
+                            {% else %}
+                                <div class="empty-state qr-empty-state">
+                                    <div class="action-icon mb-3"><i class="bi bi-qr-code"></i></div>
+                                    <h3 class="h6 mb-2">QR code not found</h3>
+                                    <p class="text-secondary mb-0">Run <code>python generate_qrcodes.py</code> to create the missing image for this asset.</p>
+                                </div>
+                            {% endif %}
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="summary-stat"><span class="label">Maintenance state</span><span class="value">{{ asset.maintenance_state }}</span></div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="summary-stat"><span class="label">Expected location</span><span class="value">{{ asset.expected_location }}</span></div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="summary-stat"><span class="label">Current location</span><span class="value">{{ asset.current_location }}</span></div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="summary-stat"><span class="label">Last scan location</span><span class="value">{{ asset.last_scan_location }}</span></div>
-                    </div>
-                    <div class="col-12">
-                        <div class="summary-stat"><span class="label">Notes</span><span class="value">{{ asset.notes }}</span></div>
+
+                    <div class="col-12 col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Item name</span><span class="value">{{ asset.item_name }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Category</span><span class="value">{{ asset.category }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Status</span><span class="value">{{ asset.status }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Maintenance state</span><span class="value">{{ asset.maintenance_state }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Owner</span><span class="value">{{ asset.owner }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Scan count</span><span class="value">{{ asset.scan_count }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Expected location</span><span class="value">{{ asset.expected_location }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Current location</span><span class="value">{{ asset.current_location }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Last scanned</span><span class="value">{{ asset.last_scanned }}</span></div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="summary-stat"><span class="label">Last scan location</span><span class="value">{{ asset.last_scan_location }}</span></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="summary-stat"><span class="label">Notes</span><span class="value">{{ asset.notes }}</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,13 +5,14 @@ from pathlib import Path
 
 import cv2
 import numpy as np
-from flask import Flask, flash, redirect, render_template, request, session, url_for
+from flask import Flask, abort, flash, redirect, render_template, request, send_from_directory, session, url_for
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
 BASE_DIR = Path(__file__).resolve().parent
 CSV_FILE = BASE_DIR / "assets_demo.csv"
+QR_CODES_DIR = BASE_DIR / "qrcodes"
 NOT_AVAILABLE = "N/A"
 FIELDNAMES = [
     "asset_id",
@@ -129,7 +130,7 @@ def normalize_asset_record(asset):
 
 def load_assets():
     assets = {}
-    with open(CSV_FILE, newline="", encoding="utf-8") as csv_file:
+    with open(CSV_FILE, newline="", encoding="utf-8-sig") as csv_file:
         reader = csv.DictReader(csv_file)
         for row in reader:
             asset = {}
@@ -243,6 +244,23 @@ def filter_assets(asset_query):
     return filtered_assets, query
 
 
+def build_qr_image_name(asset_id):
+    return f"{asset_id}_qr.png"
+
+
+def get_qr_image_path(asset_id):
+    return QR_CODES_DIR / build_qr_image_name(asset_id)
+
+
+def get_asset_detail_context(asset):
+    qr_image_path = get_qr_image_path(asset["asset_id"])
+    return {
+        "asset": asset,
+        "qr_image_available": qr_image_path.is_file(),
+        "qr_image_url": url_for("qr_code_image", filename=qr_image_path.name),
+    }
+
+
 @app.route("/")
 def home():
     return render_with_options("home.html")
@@ -263,7 +281,15 @@ def asset_detail(asset_id):
         flash(f"Unknown asset ID: {asset_id}", "error")
         return redirect(url_for("assets_page"))
 
-    return render_with_options("asset_detail.html", asset=assets[asset_id])
+    return render_with_options("asset_detail.html", **get_asset_detail_context(assets[asset_id]))
+
+
+@app.route("/qrcodes/<path:filename>")
+def qr_code_image(filename):
+    file_path = QR_CODES_DIR / filename
+    if not file_path.is_file():
+        abort(404)
+    return send_from_directory(QR_CODES_DIR, filename)
 
 
 @app.route("/scan")
@@ -337,7 +363,7 @@ def submit_scan(asset_id):
     asset = assets[asset_id]
     form_values, errors = validate_required(
         request.form,
-        ["scan_location", "status", "notes"],
+        ["scan_location", "status"],
     )
 
     form_values["scan_location"] = normalize_text_field(form_values["scan_location"])
@@ -358,6 +384,7 @@ def submit_scan(asset_id):
         form_values["maintenance_state"] = collapse_spaces(request.form.get("maintenance_state", ""))
     else:
         form_values["maintenance_state"] = selected_maintenance_state
+    form_values["notes"] = normalize_value(request.form.get("notes", ""))
 
     scanned_ids = get_session_scans()
     warnings = build_scan_context(asset, scanned_ids)["warnings"]
@@ -437,7 +464,6 @@ def add_item():
             "current_location",
             "status",
             "owner",
-            "notes",
         ]
 
         for field_name in required_fields:

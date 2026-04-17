@@ -1,7 +1,7 @@
-﻿asset_id,item_name,category,expected_location,current_location,status,owner,maintenance_state,last_scanned,last_scan_location,scan_count,notes
+asset_id,item_name,category,expected_location,current_location,status,owner,maintenance_state,last_scanned,last_scan_location,scan_count,notes
 A001,HDMI Cable,AV Accessory,Room 101,Room 101,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
 A002,Projector Remote,AV Accessory,Room 203,Room 203,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
-A003,Laptop Charger,Power,Storage,Storage,Spare,Tech Staff,Good,N/A,N/A,0,N/A
+A003,Laptop Charger,Power,Storage,Room 101,Spare,Tech Staff,Good,2026-04-16 22:20:04,Room 101,1,N/A
 A004,Document Camera,AV Equipment,Room 110,Room 110,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
 A005,Wireless Mic,Audio,Room 205,Room 205,Active,Event Support,Needs Battery,N/A,N/A,0,N/A
 A006,Tablet Cart,Mobile Device,Room 102,Room 102,Active,Classroom Mgmt,Good,N/A,N/A,0,N/A
@@ -454,4 +454,3 @@ A452,Walkie Talkie 452,Facilities,Room 107,Room 107,Active,Library Staff,Good,20
 A453,Camera 453,Safety,Room 108,Room 108,Active,Event Support,Good,2026-03-27 02:26:00,Room 108,2,Issued for daily use
 A454,Tripod 454,Audio,Room 109,Room 109,Active,Security Team,Needs Battery,2026-03-28 03:33:00,Room 109,3,Assigned to shared pool
 A455,Lighting Kit 455,Maintenance,Room 110,Room 110,Spare,Front Desk,Maintenance Due,2026-03-29 04:40:00,Room 110,4,Check accessories before checkout
-

@@ -11,7 +11,7 @@ OUTPUT_DIR = BASE_DIR / "qrcodes"
 def generate_qr_codes():
     OUTPUT_DIR.mkdir(exist_ok=True)
 
-    with open(CSV_FILE, newline="", encoding="utf-8") as csv_file:
+    with open(CSV_FILE, newline="", encoding="utf-8-sig") as csv_file:
         reader = csv.DictReader(csv_file)
         count = 0
 
