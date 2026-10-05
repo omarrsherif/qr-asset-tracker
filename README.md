@@ -1,337 +1,139 @@
-# Local Inventory App
+# qr-asset-tracker
 
-A lightweight inventory tracking app built with Flask and CSV storage.
-It is designed to run locally on a laptop, with a simple browser-based interface that can also be opened from another device on the same network.
+A small inventory app for tracking physical assets with QR codes. It runs on a
+laptop, stores everything in one CSV file, and is meant to be opened from a
+phone on the same network: photograph an item's QR code, confirm where it is,
+and the record is updated.
 
-The project includes:
+Built with Flask. QR codes are read on the server with OpenCV, so the phone only
+needs a browser and a camera.
 
-- A web app for scanning, creating, browsing, and reviewing inventory items
-- CSV-backed storage for easy local use and portability
-- QR code lookup from uploaded images
-- A console demo script for simple terminal-based testing
+## What it does
 
-## Features
+- **Scan.** Upload a photo of a QR code, or type the asset ID. The app finds the
+  record and opens an update form for location, status, maintenance state, and
+  notes. Saving also stamps the scan time and adds one to the scan count.
+- **Create.** Add a new asset to the inventory.
+- **Browse.** Search every asset and open one to see its details and QR code.
 
-- Home page with `Scan`, `Create`, and `Browse` flows
-- Browse page with flexible asset search
-- Asset detail page for reviewing a single record
-- Scan flow with:
-  - QR image upload lookup
-  - manual asset ID lookup
-  - duplicate scan warnings within the same session
-  - unknown asset warnings
-  - location mismatch warnings
-  - scan count updates
-  - status updates
-  - maintenance state updates
-  - notes updates
-- Create flow for adding new inventory items to the CSV file
-- Dropdown-based `Status` and `Maintenance state` fields in the web UI
-- Case-insensitive and space-insensitive search
-- Automatic normalization of legacy `NA` values to `N/A`
-- QR code generation for every `asset_id`
+While scanning, the app warns about things worth a second look:
 
-## Project Structure
+- the item was already scanned in this session
+- the asset ID is not in the inventory
+- the item is somewhere other than its expected location
 
-```text
-app.py
-assets_demo.csv
-asset_inventory.py
-generate_qrcodes.py
-requirements.txt
-README.md
-templates/
-static/
-qrcodes/
+Text is tidied as it is saved, so the data stays consistent no matter how it was
+typed. `classroom   mgmt` is stored as `Classroom Mgmt`, asset IDs are stored
+uppercase without spaces, and empty values become `N/A`. Search ignores case and
+spacing, so `room101` finds `Room 101`.
+
+## Running it
+
+You need Python 3.10 or newer.
+
+```
+git clone https://github.com/omarrsherif/qr-asset-tracker.git
+cd qr-asset-tracker
 ```
 
-## Requirements
+Create a virtual environment and install the dependencies.
 
-Before running the project, make sure you have:
-
-- Python 3.10 or newer recommended
-- `pip` available in your Python installation
-
-## Download Or Clone
-
-You can get the project in either of these ways:
-
-### Option 1: Clone with Git
-
-```bash
-git clone https://github.com/omarrsherif/Inventory-Project.git
-cd Inventory-Project
-```
-
-### Option 2: Download as ZIP
-
-1. Download the repository ZIP from GitHub.
-2. Extract it anywhere on your computer.
-3. Open a terminal in the extracted `Inventory-Project` folder.
-
-The project does not need to live in a specific directory. You can run it from any location as long as you open the terminal in the project folder first.
-
-## Setup
-
-Create a virtual environment, activate it, and install the dependencies.
-
-### macOS and Linux
+macOS and Linux:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
-### Windows PowerShell
+Windows PowerShell:
 
 ```powershell
 py -m venv .venv
 .venv\Scripts\Activate.ps1
-py -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
-### Windows Command Prompt
+In Command Prompt the activation command is `.venv\Scripts\activate.bat`. If
+`py` is not available, use `python`.
 
-```bat
-py -m venv .venv
-.venv\Scripts\activate.bat
-py -m pip install -r requirements.txt
+Then, with the environment active, on any platform:
+
+```
+python generate_qrcodes.py
+python app.py
 ```
 
-If `py` is not available on Windows, replace it with `python`.
+`generate_qrcodes.py` writes one QR image per asset into `qrcodes/`, named like
+`A001_qr.png`. Run it again after adding assets.
 
-## Run The Web App
+Open http://127.0.0.1:5000 on the laptop.
 
-### macOS and Linux
+### Opening it on a phone
 
-```bash
-python3 app.py
+1. Connect the phone to the same Wi-Fi as the laptop.
+2. Find the laptop's local IP address. The app prints the addresses it is
+   listening on when it starts. You can also run `ipconfig getifaddr en0` on
+   macOS, or `ipconfig` on Windows and read the IPv4 address of the active
+   adapter.
+3. Open that address with port 5000 on the phone, for example
+   `http://192.168.1.25:5000`.
+
+### Before you run it on a shared network
+
+The app has no login, and it listens on every network interface so that a phone
+can reach it. Anyone on the same network can view and change the inventory. Run
+it on a network you trust.
+
+Debug mode is off by default. Set `FLASK_DEBUG=1` to turn it on while
+developing, and only on a network where you are the only user, because Flask's
+debugger allows running code on the machine.
+
+### Troubleshooting
+
+- **PowerShell blocks the activation script.** Run
+  `Set-ExecutionPolicy -Scope Process Bypass` in that window, then activate
+  again.
+- **Packages install into the wrong Python.** Use `python3 -m pip` on macOS and
+  Linux, or `py -m pip` on Windows.
+- **Port 5000 is already in use.** Stop the other program that is using it. On
+  macOS this is often AirPlay Receiver, which can be turned off in System
+  Settings.
+
+## The data
+
+Everything lives in `assets_demo.csv`, which ships with 455 made-up assets for a
+school building. The app writes to this file directly, so using the app changes
+it. `git restore assets_demo.csv` puts the demo data back.
+
+| Column | Meaning |
+| --- | --- |
+| `asset_id` | Unique ID, also the text inside the QR code |
+| `item_name`, `category`, `owner` | What the item is and who is responsible for it |
+| `expected_location` | Where the item belongs |
+| `current_location` | Where it was last scanned |
+| `status` | `Active`, `Spare`, `In Repair`, or `Retired` |
+| `maintenance_state` | `Good`, `Maintenance Due`, `Needs Battery`, `Needs Replacement`, `Restock Needed`, or `N/A` |
+| `last_scanned`, `last_scan_location`, `scan_count` | Filled in by the scan flow |
+| `notes` | Free text |
+
+## Project layout
+
+```
+app.py                Flask app: routes, CSV loading and saving, normalization, QR decoding
+generate_qrcodes.py   creates qrcodes/<asset_id>_qr.png for every asset
+asset_inventory.py    the original terminal version of the scan flow
+assets_demo.csv       the inventory
+templates/            Jinja pages
+static/style.css      styling on top of Bootstrap
+qrcodes/              generated QR images (not committed)
 ```
 
-### Windows PowerShell or Command Prompt
+`asset_inventory.py` is the console prototype the web app grew out of. It reads
+and writes the same CSV and runs with `python asset_inventory.py`.
 
-```powershell
-py app.py
-```
+## Limits
 
-When the server starts, open:
-
-```text
-http://127.0.0.1:5000
-```
-
-The Flask app is configured to run on port `5000`.
-
-## Open It On Another Device
-
-The app listens on `0.0.0.0`, which means it can be opened from another device on the same local network.
-
-1. Make sure your laptop and phone are connected to the same Wi-Fi network.
-2. Find your computer's local IP address.
-3. Open `http://YOUR_IP_ADDRESS:5000` on the other device.
-
-Example:
-
-```text
-http://192.168.1.25:5000
-```
-
-Find your local IP address with:
-
-### macOS
-
-```bash
-ipconfig getifaddr en0
-```
-
-If you are using Ethernet or `en0` does not return an address:
-
-```bash
-ifconfig
-```
-
-### Windows
-
-```powershell
-ipconfig
-```
-
-Look for the IPv4 address on your active network adapter.
-
-## Using The App
-
-### Scan
-
-Use the Scan flow to update an existing asset.
-
-You can:
-
-- upload a QR image
-- enter an asset ID manually
-- review warnings before saving
-- update location, status, maintenance state, and notes
-
-When a scan is submitted, the app updates:
-
-- `current_location`
-- `last_scan_location`
-- `last_scanned`
-- `scan_count`
-- `status`
-- `maintenance_state`
-- `notes`
-
-### Create
-
-Use the Create flow to add a new item to inventory.
-
-The form includes:
-
-- asset ID
-- item name
-- category
-- owner
-- expected location
-- current location
-- status
-- maintenance state
-- notes
-
-### Browse
-
-Use the Browse flow to:
-
-- search the asset list
-- open a single asset record
-- review item details
-
-Browse search checks:
-
-- `asset_id`
-- `item_name`
-- `category`
-- `owner`
-- `status`
-- `expected_location`
-- `current_location`
-
-## Text Normalization Rules
-
-The app normalizes several fields so data stays consistent even when users type values differently.
-
-Current behavior:
-
-- extra spaces are collapsed to a single space
-- search ignores case differences
-- search ignores spacing differences
-- stored values are displayed in a normalized title-style format
-- `asset_id` is stored uppercase with spaces removed
-- blank placeholder-style values are stored as `N/A`
-
-Examples:
-
-- `classroom   mgmt` becomes `Classroom Mgmt`
-- `room101` and `Room 101` are treated consistently in search
-- `na` is normalized to `N/A`
-
-## Dropdown Options
-
-### Status
-
-- `Active`
-- `Spare`
-- `In Repair`
-- `Retired`
-
-### Maintenance State
-
-- `N/A`
-- `Good`
-- `Maintenance Due`
-- `Needs Battery`
-- `Needs Replacement`
-- `Restock Needed`
-
-## Generate QR Codes
-
-Run the QR code generator from the project folder.
-
-### macOS and Linux
-
-```bash
-python3 generate_qrcodes.py
-```
-
-### Windows
-
-```powershell
-py generate_qrcodes.py
-```
-
-The script creates PNG files in the `qrcodes/` folder with names like:
-
-```text
-A001_qr.png
-```
-
-## Console Demo
-
-The original terminal version is still included in:
-
-```text
-asset_inventory.py
-```
-
-This script is useful if you want a simpler console-based example alongside the Flask app.
-
-## Data File
-
-The app stores data in `assets_demo.csv` with these columns:
-
-- `asset_id`
-- `item_name`
-- `category`
-- `expected_location`
-- `current_location`
-- `status`
-- `owner`
-- `maintenance_state`
-- `last_scanned`
-- `last_scan_location`
-- `scan_count`
-- `notes`
-
-## Placeholder Values
-
-The app uses `N/A` as the standard placeholder for missing or unset values.
-
-This applies to fields such as:
-
-- `maintenance_state`
-- `last_scanned`
-- `last_scan_location`
-- `notes`
-
-Older `NA` values are normalized automatically when data is loaded and saved.
-
-## QR Scanning Notes
-
-- The current web app supports QR lookup from uploaded images
-- Manual asset ID entry is still available
-- The current project does not yet implement barcode reading in the main app flow
-
-## Troubleshooting
-
-- If the virtual environment activation command is blocked in PowerShell, run:
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-```
-
-- If `pip` installs to the wrong Python version, use `python3 -m pip` on macOS/Linux or `py -m pip` on Windows.
-- If port `5000` is already in use, stop the other process using that port before starting the app again.
-
-## License
-
-Add a license section here if you plan to distribute or reuse the project publicly.
+- QR codes only. Barcodes are not read.
+- Scanning works from an uploaded photo, not a live camera view.
+- One CSV file with no locking, so it suits one person scanning at a time.
