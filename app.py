@@ -1,4 +1,5 @@
 import csv
+import os
 import secrets
 from datetime import datetime
 from pathlib import Path
@@ -525,4 +526,7 @@ def back_from_add_item():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # Listens on every interface so a phone on the same network can reach it.
+    # Debug mode lets anyone who can reach the server run code on this machine,
+    # so it stays off unless FLASK_DEBUG=1 is set.
+    app.run(host="0.0.0.0", port=5000, debug=os.environ.get("FLASK_DEBUG") == "1")
